@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "On-chip Telecom Quantum Memory"
+excerpt: "Working on building high-performing quantum memory for quantum information processing and networks. Currently implemented memory schemes on Er-doped TFLN as described by the following manuscript. We are currently pursuing approaches to get highly efficient memory using slow light"
 collection: portfolio
 ---
 
