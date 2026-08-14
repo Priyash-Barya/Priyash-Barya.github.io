@@ -23,7 +23,7 @@ repository               : "Priyash-Barya/Priyash-Barya.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Priyash Barya"
   pronouns         : # example: "she/her"  
   bio              : "I am currently a graduate student at the University of Illinois Urbana Champaign."
