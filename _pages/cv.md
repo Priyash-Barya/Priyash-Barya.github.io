@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-[Download my CV (PDF)]({{ base_path }}/files/cv.pdf){: .btn .btn--primary}
+[Download my CV (PDF)]({{ base_path }}/files/CV.pdf){: .btn .btn--primary}
