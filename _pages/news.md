@@ -5,34 +5,36 @@ title: "News"
 author_profile: true
 ---
 
-- **8/1/2026** My paper "Telecom Quantum Memory over One Microsecond in Nanophotonic Lithium Niobate" has been accepted in Nano Letters, reporting a record efficiency-storage-time product for quantum memory on any integrated nanophotonic platform. [[link]](https://arxiv.org/abs/2605.11588)
+- **8/1/2026** Our paper "Telecom Quantum Memory over One Microsecond in Nanophotonic Lithium Niobate" has been accepted in Nano Letters! [[link]](https://arxiv.org/abs/2605.11588)
 
-- **5/2026** I presented "Integrated Nanophotonic Waveguides for Telecom-band Single Photon Storage" at CLEO 2026 in Charlotte, NC.
+- **5/18/2026** I presented a talk on "Integrated Nanophotonic Waveguides for Telecom-band Single Photon Storage" at CLEO 2026 in Charlotte, NC.
 
-- **4/2026** I received the Paul D. Coleman Outstanding Research Award for the second year running, at the ECE Student Awards and Recognition Banquet. [[link]](https://ece.illinois.edu/news/awards-banquet-2026)
+- **5/11/2026** I was awarded the SPIE Optics and Photonics Scholarship.
 
-- **2026** I was awarded the SPIE Optics and Photonics Scholarship.
+- **3/29/2026** I received the Paul D. Coleman Outstanding Research Award for the second year running.
 
-- **1/2026** I gave an invited talk on ultra-high-Q tunable microring resonators enabled by slow light at SPIE Photonics West 2026.
+- **1/18/2026** I gave an invited talk at SPIE Photonics West 2026.
 
-- **12/2025** Our slow-light microring work was covered by [Phys.org](https://phys.org/news/2025-12-reconfigurable-platform-chip-photonic.html) and [EurekAlert!](https://www.eurekalert.org/news-releases/1110051), along with MSN, Mirage News, Semiconductor Engineering, IQUIST News, UIUC Physics News, and Photonics Online.
+- **11/25/2025** Our paper "Ultra High-Q Tunable Microring Resonators Enabled by Slow Light" is out in Nature Communications! [[link]](https://doi.org/10.1038/s41467-025-65533-1). Also check out the news coverage at [Phys.org](https://phys.org/news/2025-12-reconfigurable-platform-chip-photonic.html) 
 
-- **11/25/2025** Our paper "Ultra High-Q Tunable Microring Resonators Enabled by Slow Light" is out in Nature Communications, showing a three-order-of-magnitude Q enhancement in Er³⁺:LNOI microrings via slow-light-enhanced spectral-hole burning. [[link]](https://doi.org/10.1038/s41467-025-65533-1)
+- **10/6/2025** We filed a U.S. Patent Application No. 63/893,290, "Ultra-Narrow Tunable Resonators On-Chip Enabled by Slow Light," now pending.
 
-- **2025** I filed U.S. Patent Application No. 63/893,290, "Ultra-Narrow Tunable Resonators On-Chip Enabled by Slow Light," now pending.
+- **9/18/2025** I presented a poster at the Rare Earth Ions for Quantum Information workshop in Munich, Germany.
 
-- **2025** I was awarded the Joan and Lalit Bahl Fellowship (2025-2027), Department of Electrical and Computer Engineering, UIUC.
+- **8/4/2025** I presented our slow-light microring work at SPIE Optics and Photonics 2025.
+  
+- **5/6/2025** I was awarded the prestigious Joan and Lalit Bahl Fellowship (2025-2027) by the Department of Electrical and Computer Engineering, UIUC.
 
-- **2025** I was named a Mavis Future Faculty Fellow (2025-2026), The Grainger College of Engineering, UIUC.
+- **5/6/2025** I presented our work titled "Ultra High-Q tunable microring resonators by slow light" at CLEO 2025.
 
-- **4/17/2025** I received the Paul D. Coleman Outstanding Research Award at the ECE Student Awards and Recognition Banquet. [[link]](https://ece.illinois.edu/news/awards-banquet-2025)
+- **5/1/2025** I was named a Mavis Future Faculty Fellow (2025-2026) by the Grainger College of Engineering, UIUC.
 
-- **8/2025** I presented our slow-light microring work at SPIE Optics and Photonics 2025.
+- **4/17/2025** I received the Paul D. Coleman Outstanding Research Award.
 
-- **5/2025** I presented at CLEO 2025.
+- **4/3/2025** I passed my PhD preliminary examination in the ECE department!
 
-- **2025** I gave a talk at the IQUIST Young Researchers Seminar, University of Illinois.
+- **3/26/2025** I presented an invited talk as part of the IQUIST Young Researchers Seminar series
 
-- **8/2024** I gave an invited talk on "Towards a Thin-Film Lithium Niobate Nanophotonic Cavity-Enhanced Telecom-Compatible Quantum Memory" at SPIE Optics and Photonics 2024.
+- **19/8/2024** I gave an invited talk on "Towards a Thin-Film Lithium Niobate Nanophotonic Cavity-Enhanced Telecom-Compatible Quantum Memory" at SPIE Optics and Photonics 2024.
 
-- **5/2024** I presented at CLEO 2024.
+- **5/8/2024** I presented my talk titled "Towards Nanophotonic Cavity-Enhanced Telecom-Compatible Quantum Memory on Thin-Film Lithium Niobate " at CLEO 2024.
