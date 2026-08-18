@@ -1,0 +1,101 @@
+diff --git a/_pages/about.md b/_pages/about.md
+index 50dc307..11fa677 100644
+--- a/_pages/about.md
++++ b/_pages/about.md
+@@ -11,6 +11,8 @@ I am currently a PhD student at the University of Illinois Urbana Champaign (UIU
+ 
+ Research Experience
+ ======
++Below are the main threads of my research. Where available, the title of each links directly to a representative publication (the <i class="fa fa-link" aria-hidden="true"></i> icon links to the item's own page).
++
+ {% include base_path %}
+ 
+ {% for post in site.portfolio %}
+diff --git a/_portfolio/portfolio-1.html b/_portfolio/portfolio-1.html
+index be78f26..4102618 100644
+--- a/_portfolio/portfolio-1.html
++++ b/_portfolio/portfolio-1.html
+@@ -1,11 +1,16 @@
+ ---
+ title: "Integrated Nanophotonics"
+-excerpt: "<br/><img src='/images/SlowerInternal_PNG.png'>
+-<strong>Ultra slow light in nanophotonics</strong> Light travels fast and doesn't stay very long in nanophotonic devices due to propagation losses. We use extreme dispersion in nanophotonic devices using coherent atoms doped in the material. One interesting outcome of this in resonators is a significant 
+-increase in the lifetime of the cavity (record-high values). <br>
+-<strong>Novel Electro-optic effects</strong> Using electro-optic modulation to couple slow-light or polaritonic modes. <br>
+-<strong>Topological photonics with TFLN </strong>  Collaborating with Prof Hafezi's group on using the multitime scales to relax phase matching and allow poling-free nonlinear effects"
++excerpt: "<img src='/images/SlowerInternal_PNG.png'>
++<p>Light travels fast and doesn't stay very long in nanophotonic devices due to propagation losses. We use extreme dispersion &mdash; engineered with coherent atoms doped into the material &mdash; to slow it down dramatically.</p>
++<ul>
++<li><strong>Ultra-slow light:</strong> a significant, record-high increase in resonator cavity lifetime, enabled by atom-induced dispersion.</li>
++<li><strong>Novel electro-optic effects:</strong> using electro-optic modulation to couple slow-light or polaritonic modes.</li>
++<li><strong>Topological photonics with TFLN:</strong> collaborating with Prof. Hafezi's group on using multiple timescales to relax phase matching and enable poling-free nonlinear effects.</li>
++</ul>"
+ collection: portfolio
++link: /publication/2025-11-25-ultra-high-q-tunable-microring-resonators
+ ---
+ 
+-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
++Light travels fast and doesn't stay very long in nanophotonic devices due to propagation losses. My work uses extreme dispersion, engineered with coherent atoms doped into the material, to slow it down dramatically. In resonators, one striking outcome of this is a record-high increase in cavity lifetime.
++
++I'm also exploring novel electro-optic effects, using electro-optic modulation to couple slow-light or polaritonic modes, and collaborating with Prof. Hafezi's group on topological photonics in thin-film lithium niobate (TFLN), using multiple timescales to relax phase matching and enable poling-free nonlinear effects.
+diff --git a/_portfolio/portfolio-2.html b/_portfolio/portfolio-2.html
+index 93caaad..fc04bd0 100644
+--- a/_portfolio/portfolio-2.html
++++ b/_portfolio/portfolio-2.html
+@@ -1,7 +1,15 @@
+ ---
+ title: "Quantum Technologies"
+-excerpt: "Working on building high-performing quantum memory for quantum information processing and networks.<br/>• Currently implemented memory schemes on Er-doped TFLN as described by the following manuscript.<br/>• We are currently pursuing approaches to get highly efficient memory using slow light.<br/><img src='/images/QuantumMem_OnChip.png'>"
++excerpt: "<img src='/images/QuantumMem_OnChip.png'>
++<p>Working on building high-performing quantum memory for quantum information processing and networking.</p>
++<ul>
++<li>Implemented memory schemes on erbium-doped TFLN, as described in our <a href='/publication/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-niobate'>Nano Letters manuscript</a>.</li>
++<li>Currently pursuing approaches to reach highly efficient memory using slow light.</li>
++</ul>"
+ collection: portfolio
++link: /publication/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-niobate
+ ---
+ 
+-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
++I work on building high-performing quantum memory for quantum information processing and networking. I've implemented memory schemes on erbium-doped thin-film lithium niobate (Er:TFLN), storing telecom-band single photons for over a microsecond &mdash; a record efficiency-storage-time product for any integrated nanophotonic platform, as described in our Nano Letters manuscript below.
++
++I'm currently pursuing approaches to push memory efficiency even higher using slow light.
+diff --git a/_portfolio/portfolio-3.html b/_portfolio/portfolio-3.html
+index 354589f..a1a5b44 100644
+--- a/_portfolio/portfolio-3.html
++++ b/_portfolio/portfolio-3.html
+@@ -1,8 +1,11 @@
+ ---
+ title: "Physics of atomic ensembles"
+-excerpt: "<strong>Superradiant emission</strong> We observe surprising collective radiation from inhomogenously broadened rare-earth ensembles coupled to a waveguide <br>
+-<strong>Atom mediated non-linear optics </strong> Using narrow inhomogeously broadened media to mediate non-linear effects<br/><img src='/images/SuperradianceFig.png'>"
++excerpt: "<img src='/images/SuperradianceFig.png'>
++<ul>
++<li><strong>Superradiant emission:</strong> observing surprising collective radiation from inhomogeneously broadened rare-earth ensembles coupled to a waveguide.</li>
++<li><strong>Atom-mediated nonlinear optics:</strong> using narrow, inhomogeneously broadened media to mediate nonlinear effects.</li>
++</ul>"
+ collection: portfolio
+ ---
+ 
+-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
++I study superradiant emission, the surprising collective radiation observed from inhomogeneously broadened rare-earth ensembles coupled to a waveguide. I'm also interested in atom-mediated nonlinear optics, using narrow, inhomogeneously broadened media to mediate nonlinear effects.
+diff --git a/_portfolio/portfolio-4.html b/_portfolio/portfolio-4.html
+index cfdff89..5967d0c 100644
+--- a/_portfolio/portfolio-4.html
++++ b/_portfolio/portfolio-4.html
+@@ -1,8 +1,12 @@
+ ---
+ title: "Metamaterial and plasmonics"
+-excerpt: " <strong> Plasmonic-Photonic hybrid </strong> - Using their coupling to enhance fluorescence emission from a dye molecule. The enhancement was a result of the enhanced electric field, improved collection of emission, and Purcell-enhanced emission rate <br>
+-<strong> Biosensing </strong>Used these effects to enhance biosensing of single protein molecules. <br/><img src='/images/PlasmonicPhotonic.jpg'>"
++excerpt: "<img src='/images/PlasmonicPhotonic.jpg'>
++<ul>
++<li><strong>Plasmonic-photonic hybrids:</strong> coupling the two to enhance fluorescence emission from a dye molecule, driven by enhanced electric fields, improved emission collection, and Purcell-enhanced emission rate.</li>
++<li><strong>Biosensing:</strong> using these effects for ultrasensitive, digital-resolution detection of single protein molecules.</li>
++</ul>"
+ collection: portfolio
++link: /publication/2023-11-01-photonic-plasmonic-coupling-enhanced-fluorescence
+ ---
+ 
+-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
++I couple plasmonic and photonic structures to enhance fluorescence emission from dye molecules, driven by enhanced electric fields, improved emission collection, and Purcell-enhanced emission rate. I've applied these effects to biosensing, enabling ultrasensitive, digital-resolution detection of single protein molecules, as described in the publication below.
