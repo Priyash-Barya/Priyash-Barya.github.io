@@ -11,7 +11,6 @@ I am currently a PhD student at the University of Illinois Urbana Champaign (UIU
 
 Research Experience
 ======
-Below are the main threads of my research. Where available, the title of each links directly to a representative publication (the <i class="fa fa-link" aria-hidden="true"></i> icon links to the item's own page).
 
 {% include base_path %}
 
