@@ -6,6 +6,7 @@ permalink: /publication/2019-12-01-paper-based-pressure-sensor-drug-dosage
 excerpt: 'An all-paper, disposable pressure sensor with a smartphone-connected readout monitors medicine-container usage to help track prescription drug dosage.'
 date: 2019-12-01
 venue: 'IEEE Sensors Journal'
+authors: 'V. Selamneni, <strong>P. Barya</strong>, N. Deshpandey, P. Sahatiya'
 paperurl: 'https://doi.org/10.1109/JSEN.2019.2935383'
 citation: 'V. Selamneni, P. Barya, N. Deshpandey, P. Sahatiya. &quot;Low-Cost, Disposable, Flexible and Smartphone Enabled All Paper Based Pressure Sensor for Monitoring Drug Dosage in Smart Medicine Applications.&quot; <i>IEEE Sensors Journal</i> 19(23), 11255-11261 (2019).'
 ---

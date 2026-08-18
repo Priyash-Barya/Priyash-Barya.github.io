@@ -6,6 +6,7 @@ permalink: /publication/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-n
 excerpt: 'Demonstration of an atomic frequency comb quantum memory in erbium-doped nanophotonic thin-film lithium niobate storing telecom-band single photons for over one microsecond, with multimode storage and GHz-scale bandwidth — a record efficiency-storage-time product for any integrated nanophotonic platform.'
 date: 2026-08-01
 venue: 'Nano Letters'
+authors: '<strong>P. Barya</strong>*, D. Chen*, A. Prabhu, L. Heller, E. Chow, H. Kim, J. Akin, V. Niaouris, J. Zhang, A. M. Dibos, P. Wang, E. A. Goldschmidt'
 paperurl: 'https://arxiv.org/abs/2605.11588'
 citation: 'P. Barya*, D. Chen*, A. Prabhu, L. Heller, E. Chow, H. Kim, J. Akin, V. Niaouris, J. Zhang, A. M. Dibos, P. Wang, E. A. Goldschmidt. &quot;Telecom Quantum Memory over One Microsecond in Nanophotonic Lithium Niobate.&quot; <i>Nano Letters</i> (2026), accepted.'
 ---

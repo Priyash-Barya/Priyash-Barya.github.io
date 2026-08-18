@@ -1,0 +1,175 @@
+diff --git a/_includes/archive-single.html b/_includes/archive-single.html
+index fd14252..01116fb 100644
+--- a/_includes/archive-single.html
++++ b/_includes/archive-single.html
+@@ -26,9 +26,15 @@
+       </div>
+     {% endif %}
+ 
++    {% if post.link %}
++      {% assign ext_url = post.link %}
++    {% elsif post.collection == 'publications' and post.paperurl %}
++      {% assign ext_url = post.paperurl %}
++    {% endif %}
++
+     <h2 class="archive__item-title" itemprop="headline">
+-      {% if post.link %}
+-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
++      {% if ext_url %}
++        <a href="{{ ext_url }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+       {% else %}
+         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+       {% endif %}
+@@ -41,17 +47,19 @@
+         {% if post.collection == 'teaching' %}
+           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+         {% elsif post.collection == 'publications' %}
+-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
++          {% if post.authors %}<p class="archive__item-authors">{{ post.authors }}</p>{% endif %}
++          <p class="archive__item-venue"><i>{{ post.venue }}</i>{% if post.date %}, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}</p>
+         {% elsif post.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+         {% endif %}
+ 
+-    {% if post.excerpt and site.read_more != 'enabled' %}
++    {% if post.excerpt and site.read_more != 'enabled' and post.collection != 'publications' %}
+     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+-    {% elsif post.excerpt and site.read_more == 'enabled' %}
++    {% elsif post.excerpt and site.read_more == 'enabled' and post.collection != 'publications' %}
+     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+     {% endif %}
+-    
++
++    {% unless post.collection == 'publications' %}
+     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
+       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+     {% elsif post.citation and post.paperurl and post.slidesurl %}
+@@ -79,6 +87,7 @@
+     {% elsif post.bibtexurl %}
+       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+     {% endif %}
++    {% endunless %}
+ 
+   </article>
+ </div>
+diff --git a/_pages/publications.html b/_pages/publications.html
+index e2f9461..093eb3a 100644
+--- a/_pages/publications.html
++++ b/_pages/publications.html
+@@ -9,6 +9,18 @@ author_profile: true
+   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+ {% endif %}
+ 
++<style>
++  .archive__item-authors {
++    margin: 0.3em 0 0.1em;
++    color: #555;
++  }
++  .archive__item-venue {
++    margin: 0 0 1.2em;
++    color: #767676;
++    font-size: 0.9em;
++  }
++</style>
++
+ {% include base_path %}
+ 
+ <!-- New style rendering if publication categories are defined -->
+diff --git a/_publications/2019-12-01-paper-based-pressure-sensor-drug-dosage.md b/_publications/2019-12-01-paper-based-pressure-sensor-drug-dosage.md
+index 25c5662..6098b39 100644
+--- a/_publications/2019-12-01-paper-based-pressure-sensor-drug-dosage.md
++++ b/_publications/2019-12-01-paper-based-pressure-sensor-drug-dosage.md
+@@ -6,6 +6,7 @@ permalink: /publication/2019-12-01-paper-based-pressure-sensor-drug-dosage
+ excerpt: 'An all-paper, disposable pressure sensor with a smartphone-connected readout monitors medicine-container usage to help track prescription drug dosage.'
+ date: 2019-12-01
+ venue: 'IEEE Sensors Journal'
++authors: 'V. Selamneni, <strong>P. Barya</strong>, N. Deshpandey, P. Sahatiya'
+ paperurl: 'https://doi.org/10.1109/JSEN.2019.2935383'
+ citation: 'V. Selamneni, P. Barya, N. Deshpandey, P. Sahatiya. &quot;Low-Cost, Disposable, Flexible and Smartphone Enabled All Paper Based Pressure Sensor for Monitoring Drug Dosage in Smart Medicine Applications.&quot; <i>IEEE Sensors Journal</i> 19(23), 11255-11261 (2019).'
+ ---
+diff --git a/_publications/2020-09-04-plasmonic-photocatalysis-sers-sensing-ag-nanoisland.md b/_publications/2020-09-04-plasmonic-photocatalysis-sers-sensing-ag-nanoisland.md
+index f0f4822..f7337bb 100644
+--- a/_publications/2020-09-04-plasmonic-photocatalysis-sers-sensing-ag-nanoisland.md
++++ b/_publications/2020-09-04-plasmonic-photocatalysis-sers-sensing-ag-nanoisland.md
+@@ -6,6 +6,7 @@ permalink: /publication/2020-09-04-plasmonic-photocatalysis-sers-sensing-ag-nano
+ excerpt: 'Ellipsometric modeling of RF-sputtered silver nanoisland substrates identifies Fano-resonant hybrid plasmonic modes, informing their use for enhanced photocatalysis and SERS sensing.'
+ date: 2020-09-04
+ venue: 'Nanotechnology'
++authors: 'A. P. Manuel, <strong>P. Barya</strong>, S. Riddell, S. Zeng, K. M. Alam, K. Shankar'
+ paperurl: 'https://doi.org/10.1088/1361-6528/ab814c'
+ citation: 'A. P. Manuel, P. Barya, S. Riddell, S. Zeng, K. M. Alam, K. Shankar. &quot;Plasmonic Photocatalysis and SERS Sensing Using Ellipsometrically Modeled Ag Nanoisland Substrates.&quot; <i>Nanotechnology</i> 31(36), 365301 (2020).'
+ ---
+diff --git a/_publications/2021-12-20-label-free-digital-detection-intact-virions.md b/_publications/2021-12-20-label-free-digital-detection-intact-virions.md
+index d017b98..65688ad 100644
+--- a/_publications/2021-12-20-label-free-digital-detection-intact-virions.md
++++ b/_publications/2021-12-20-label-free-digital-detection-intact-virions.md
+@@ -6,6 +6,7 @@ permalink: /publication/2021-12-20-label-free-digital-detection-intact-virions
+ excerpt: 'An aptamer-functionalized photonic crystal combined with interferometric scattering microscopy enables label-free, single-virion detection of intact SARS-CoV-2 pseudovirus at a limit of detection of 1x10^3 copies/mL.'
+ date: 2021-12-20
+ venue: 'Journal of the American Chemical Society'
++authors: 'N. Li, X. Wang, J. Tibbs, C. Che, A. S. Peinetti, B. Zhao, L. Liu, <strong>P. Barya</strong>, L. Cooper, L. Rong, X. Wang, Y. Lu, B. T. Cunningham'
+ paperurl: 'https://doi.org/10.1021/jacs.1c09579'
+ citation: 'N. Li, X. Wang, J. Tibbs, C. Che, A. S. Peinetti, B. Zhao, L. Liu, P. Barya, L. Cooper, L. Rong, X. Wang, Y. Lu, B. T. Cunningham. &quot;Label-Free Digital Detection of Intact Virions by Enhanced Scattering Microscopy.&quot; <i>Journal of the American Chemical Society</i> 144(4), 1498-1502 (2022).'
+ ---
+diff --git a/_publications/2022-01-30-microscopies-enabled-by-photonic-metamaterials.md b/_publications/2022-01-30-microscopies-enabled-by-photonic-metamaterials.md
+index c2629cc..31574b9 100644
+--- a/_publications/2022-01-30-microscopies-enabled-by-photonic-metamaterials.md
++++ b/_publications/2022-01-30-microscopies-enabled-by-photonic-metamaterials.md
+@@ -6,6 +6,7 @@ permalink: /publication/2022-01-30-microscopies-enabled-by-photonic-metamaterial
+ excerpt: 'A review of how engineered photonic metamaterials — plasmonic nanostructures and photonic crystals — enhance excitation, extraction, absorption, and scattering to boost contrast and sensitivity in biological microscopy.'
+ date: 2022-01-30
+ venue: 'Sensors'
++authors: 'Y. Xiong, N. Li, C. Che, W. Wang, <strong>P. Barya</strong>, W. Liu, L. Liu, X. Wang, S. Wu, H. Hu, B. T. Cunningham'
+ paperurl: 'https://doi.org/10.3390/s22031086'
+ citation: 'Y. Xiong, N. Li, C. Che, W. Wang, P. Barya, W. Liu, L. Liu, X. Wang, S. Wu, H. Hu, B. T. Cunningham. &quot;Microscopies Enabled by Photonic Metamaterials.&quot; <i>Sensors</i> 22(3), 1086 (2022).'
+ ---
+diff --git a/_publications/2022-08-08-photonic-crystal-enhanced-fluorescence-blinking-suppression.md b/_publications/2022-08-08-photonic-crystal-enhanced-fluorescence-blinking-suppression.md
+index 7d23c5a..a4f6bb0 100644
+--- a/_publications/2022-08-08-photonic-crystal-enhanced-fluorescence-blinking-suppression.md
++++ b/_publications/2022-08-08-photonic-crystal-enhanced-fluorescence-blinking-suppression.md
+@@ -6,6 +6,7 @@ permalink: /publication/2022-08-08-photonic-crystal-enhanced-fluorescence-blinki
+ excerpt: 'A photonic crystal surface delivers nearly 3000-fold fluorescence signal enhancement for single quantum dots and suppresses blinking, extending on-time from 15% to 85% and enabling low-cost, high-sensitivity digital biosensing.'
+ date: 2022-08-08
+ venue: 'Nature Communications'
++authors: 'Y. Xiong, Q. Huang, T. D. Canady, <strong>P. Barya</strong>, O. H. Arogundade, C. M. Race, S. Liu, X. Wang, L. Zhou, X. Wang, M. Kohli, A. M. Smith, B. T. Cunningham'
+ paperurl: 'https://doi.org/10.1038/s41467-022-32387-w'
+ citation: 'Y. Xiong, Q. Huang, T. D. Canady, P. Barya, O. H. Arogundade, C. M. Race, S. Liu, X. Wang, L. Zhou, X. Wang, M. Kohli, A. M. Smith, B. T. Cunningham. &quot;Photonic Crystal Enhanced Fluorescence Emission and Blinking Suppression for Single Quantum Dot Digital Resolution Biosensing.&quot; <i>Nature Communications</i> 13, 4647 (2022).'
+ ---
+diff --git a/_publications/2023-11-01-photonic-plasmonic-coupling-enhanced-fluorescence.md b/_publications/2023-11-01-photonic-plasmonic-coupling-enhanced-fluorescence.md
+index b2eb7dd..d90617a 100644
+--- a/_publications/2023-11-01-photonic-plasmonic-coupling-enhanced-fluorescence.md
++++ b/_publications/2023-11-01-photonic-plasmonic-coupling-enhanced-fluorescence.md
+@@ -6,6 +6,7 @@ permalink: /publication/2023-11-01-photonic-plasmonic-coupling-enhanced-fluoresc
+ excerpt: 'A hybrid photonic-crystal/plasmonic-nanoparticle platform delivers a 52x fluorescence enhancement, enabling digital-resolution detection of single IL-6 protein molecules down to about 10 fg/mL — three orders of magnitude below conventional ELISA.'
+ date: 2023-11-01
+ venue: 'Small'
++authors: '<strong>P. Barya</strong>*, Y. Xiong*, S. Shepherd*, R. Gupta, L. D. Akin, J. Tibbs, H. Lee, S. Singamaneni, B. T. Cunningham'
+ paperurl: 'https://doi.org/10.1002/smll.202207239'
+ citation: 'P. Barya*, Y. Xiong*, S. Shepherd*, R. Gupta, L. D. Akin, J. Tibbs, H. Lee, S. Singamaneni, B. T. Cunningham. &quot;Photonic-Plasmonic Coupling Enhanced Fluorescence Enabling Digital-Resolution Ultrasensitive Protein Detection.&quot; <i>Small</i> 19(44), 2207239 (2023).'
+ ---
+diff --git a/_publications/2025-11-25-ultra-high-q-tunable-microring-resonators.md b/_publications/2025-11-25-ultra-high-q-tunable-microring-resonators.md
+index e5cee77..d32a99b 100644
+--- a/_publications/2025-11-25-ultra-high-q-tunable-microring-resonators.md
++++ b/_publications/2025-11-25-ultra-high-q-tunable-microring-resonators.md
+@@ -3,8 +3,8 @@ title: "Ultra High-Q Tunable Microring Resonators Enabled by Slow Light"
+ collection: publications
+ category: manuscripts
+ permalink: /publication/2025-11-25-ultra-high-q-tunable-microring-resonators
+-excerpt: 'P. Barya, A. Prabhu, L. Heller, E. Chow, E. A. Goldschmidt'
+ date: 2025-11-25
+ venue: 'Nature Communications'
+ paperurl: 'https://doi.org/10.1038/s41467-025-65533-1'
++authors: '<strong>P. Barya</strong>, A. Prabhu, L. Heller, E. Chow, E. A. Goldschmidt'
+ ---
+diff --git a/_publications/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-niobate.md b/_publications/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-niobate.md
+index 0775ba2..56a6d9d 100644
+--- a/_publications/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-niobate.md
++++ b/_publications/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-niobate.md
+@@ -6,6 +6,7 @@ permalink: /publication/2026-08-01-telecom-quantum-memory-nanophotonic-lithium-n
+ excerpt: 'Demonstration of an atomic frequency comb quantum memory in erbium-doped nanophotonic thin-film lithium niobate storing telecom-band single photons for over one microsecond, with multimode storage and GHz-scale bandwidth — a record efficiency-storage-time product for any integrated nanophotonic platform.'
+ date: 2026-08-01
+ venue: 'Nano Letters'
++authors: '<strong>P. Barya</strong>*, D. Chen*, A. Prabhu, L. Heller, E. Chow, H. Kim, J. Akin, V. Niaouris, J. Zhang, A. M. Dibos, P. Wang, E. A. Goldschmidt'
+ paperurl: 'https://arxiv.org/abs/2605.11588'
+ citation: 'P. Barya*, D. Chen*, A. Prabhu, L. Heller, E. Chow, H. Kim, J. Akin, V. Niaouris, J. Zhang, A. M. Dibos, P. Wang, E. A. Goldschmidt. &quot;Telecom Quantum Memory over One Microsecond in Nanophotonic Lithium Niobate.&quot; <i>Nano Letters</i> (2026), accepted.'
+ ---

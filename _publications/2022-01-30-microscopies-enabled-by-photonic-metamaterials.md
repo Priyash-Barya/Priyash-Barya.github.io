@@ -6,6 +6,7 @@ permalink: /publication/2022-01-30-microscopies-enabled-by-photonic-metamaterial
 excerpt: 'A review of how engineered photonic metamaterials — plasmonic nanostructures and photonic crystals — enhance excitation, extraction, absorption, and scattering to boost contrast and sensitivity in biological microscopy.'
 date: 2022-01-30
 venue: 'Sensors'
+authors: 'Y. Xiong, N. Li, C. Che, W. Wang, <strong>P. Barya</strong>, W. Liu, L. Liu, X. Wang, S. Wu, H. Hu, B. T. Cunningham'
 paperurl: 'https://doi.org/10.3390/s22031086'
 citation: 'Y. Xiong, N. Li, C. Che, W. Wang, P. Barya, W. Liu, L. Liu, X. Wang, S. Wu, H. Hu, B. T. Cunningham. &quot;Microscopies Enabled by Photonic Metamaterials.&quot; <i>Sensors</i> 22(3), 1086 (2022).'
 ---

@@ -6,6 +6,7 @@ permalink: /publication/2023-11-01-photonic-plasmonic-coupling-enhanced-fluoresc
 excerpt: 'A hybrid photonic-crystal/plasmonic-nanoparticle platform delivers a 52x fluorescence enhancement, enabling digital-resolution detection of single IL-6 protein molecules down to about 10 fg/mL — three orders of magnitude below conventional ELISA.'
 date: 2023-11-01
 venue: 'Small'
+authors: '<strong>P. Barya</strong>*, Y. Xiong*, S. Shepherd*, R. Gupta, L. D. Akin, J. Tibbs, H. Lee, S. Singamaneni, B. T. Cunningham'
 paperurl: 'https://doi.org/10.1002/smll.202207239'
 citation: 'P. Barya*, Y. Xiong*, S. Shepherd*, R. Gupta, L. D. Akin, J. Tibbs, H. Lee, S. Singamaneni, B. T. Cunningham. &quot;Photonic-Plasmonic Coupling Enhanced Fluorescence Enabling Digital-Resolution Ultrasensitive Protein Detection.&quot; <i>Small</i> 19(44), 2207239 (2023).'
 ---
