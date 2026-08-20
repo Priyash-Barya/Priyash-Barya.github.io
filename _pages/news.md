@@ -5,7 +5,7 @@ title: "News"
 author_profile: true
 ---
 
-- **8/1/2026** Our paper "Telecom Quantum Memory over One Microsecond in Nanophotonic Lithium Niobate" has been accepted in Nano Letters! [[link]](https://arxiv.org/abs/2605.11588)
+- **8/8/2026** Our paper "Telecom Quantum Memory over One Microsecond in Nanophotonic Lithium Niobate" has been accepted in Nano Letters! [[link]](https://arxiv.org/abs/2605.11588)
 
 - **5/18/2026** I presented a talk on "Integrated Nanophotonic Waveguides for Telecom-band Single Photon Storage" at CLEO 2026 in Charlotte, NC.
 
