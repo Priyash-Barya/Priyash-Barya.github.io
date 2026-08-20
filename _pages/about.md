@@ -8,7 +8,7 @@ redirect_from:
 ---
 I am currently a ECE Ph.D. student at the University of Illinois Urbana-Champaign (UIUC) working with Prof. Elizabeth Goldschmidt. I am an experimentalist working in the area of quantum optics and currently interested in building technologies for future quantum information processing and networking. Previously, I received my MS degree from UIUC working with Prof. Brian Cunningham on using plasmonic-photonic coupling to enhance biosensing. 
 
-My contact information is - pbarya2[at]illinois.edu
+You can reach me by email at pbarya2[at]illinois.edu
 
 
 Research Experience
