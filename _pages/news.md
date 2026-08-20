@@ -35,6 +35,6 @@ author_profile: true
 
 - **3/26/2025** I presented an invited talk as part of the IQUIST Young Researchers Seminar series
 
-- **19/8/2024** I gave an invited talk on "Towards a Thin-Film Lithium Niobate Nanophotonic Cavity-Enhanced Telecom-Compatible Quantum Memory" at SPIE Optics and Photonics 2024.
+- **8/19/2024** I gave an invited talk on "Towards a Thin-Film Lithium Niobate Nanophotonic Cavity-Enhanced Telecom-Compatible Quantum Memory" at SPIE Optics and Photonics 2024.
 
 - **5/8/2024** I presented my talk titled "Towards Nanophotonic Cavity-Enhanced Telecom-Compatible Quantum Memory on Thin-Film Lithium Niobate " at CLEO 2024.
